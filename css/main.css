@@ -1,0 +1,493 @@
+@import "./variable.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+}
+.pad {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.topHeader {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: var(--grey);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.gender a {
+  color: var(--black);
+  font-weight: 700;
+  padding-right: 0.5rem;
+  text-decoration: none;
+}
+.country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country img {
+  height: 1.6rem;
+}
+.search {
+  display: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--grey);
+}
+input[type=search] {
+  border: 0;
+  font: inherit;
+  outline: none;
+}
+.mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  order: 0;
+}
+.logo .italicRed {
+  color: #d51033;
+  font-style: italic;
+  padding-right: 0.2rem;
+}
+.webmenu {
+  display: none;
+}
+.webmenu img {
+  height: 1rem;
+}
+.mobileMenu {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.mobileMenu .toggler {
+  position: relative;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0;
+}
+.mobileMenu .hamburger {
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobileMenu .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  z-index: 2;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.mobileMenu .hamburger > div::before,
+.mobileMenu .hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  background-color: inherit;
+  height: 3px;
+  width: 100%;
+}
+.mobileMenu .hamburger > div::after {
+  top: 10px;
+}
+.mobileMenu .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.mobileMenu .menu {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  z-index: 1;
+  width: 200px;
+  height: 340px;
+  background-color: #f4f4f4;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.menu img {
+  height: 1.5rem;
+}
+.menu ul {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu ul li {
+  list-style: none;
+  padding: 0.6rem 0;
+}
+.menu ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+.banner .salesAd img {
+  width: 100%;
+}
+.models {
+  display: flex;
+}
+.modelsImg {
+  position: relative;
+}
+.models img {
+  width: 100%;
+}
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.textOverlay a {
+  background-color: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+}
+.storeItems {
+  padding-top: 5rem;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleContent h2 {
+  padding-right: 0.5rem;
+  letter-spacing: 2px;
+}
+.titleContent span {
+  background-color: var(--black);
+  color: var(--white);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.non-active {
+  color: rgba(0, 0, 0, 0.596);
+}
+.categories {
+  display: flex;
+  padding-top: 2rem;
+  font-weight: 700;
+}
+.categories p {
+  padding-right: 2rem;
+}
+.row {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+}
+.card {
+  min-width: 280px;
+  min-height: 300px;
+  margin: 0.7rem 0rem;
+  line-height: 1.7;
+}
+.card.cloth-type {
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+.card p {
+  font-weight: 800;
+}
+.description .img-div {
+  background: var(--grey);
+  height: 300px;
+}
+.details {
+  padding-top: 1rem;
+}
+.section {
+  padding-top: 4rem;
+  text-align: center;
+  line-height: 1.7;
+}
+.section p {
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.747);
+}
+.section h1 {
+  letter-spacing: 2px;
+}
+.social_media {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.social_media > div {
+  min-width: 200px;
+  min-height: 150px;
+  border: 1px solid var(--lightBlack);
+  margin: 0;
+}
+.instagramhandle a {
+  color: #ff6e6e;
+  text-decoration: none;
+}
+.policies {
+  padding-top: 5rem;
+  line-height: 1.7;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-flow: wrap ;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.policies> div{
+    padding: 0.8rem;
+}
+.policies h5 {
+  font-weight: 700;
+  letter-spacing: 2px;
+
+}
+.policies p {
+  color: rgba(0, 0, 0, 0.699);
+}
+.policiesT {
+  display: flex;
+  align-items: center;
+}
+
+.smallCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f4cdcd;
+  margin-right: 0.3rem;
+}
+
+.discountForm {
+  background: var(--grey);
+  padding-bottom: 2rem;
+}
+.discountForm p {
+  letter-spacing: 1.2px;
+}
+form {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px 18px;
+  outline: none;
+  border: 1px solid #707070;
+}
+
+button {
+  background: #9a9a9a;
+  font: inherit;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 8px 18px;
+}
+footer {
+  padding-top: 4rem;
+  line-height: 2;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  color: var(--black);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.596);
+}
+footer span {
+  color: rgba(0, 0, 0, 0.596);
+}
+.moreInformation {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.otherInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  padding-bottom: 1rem;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+}
+.social-icons li {
+  padding: 0 0.4rem;
+}
+.social-icons li a {
+  background: rgba(0, 0, 0, 0.719);
+  color: white;
+  padding: 0.3rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+}
+.social-icons li a:hover {
+  background: var(--black);
+}
+.CustomerCARE {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 611px) {
+  .banner .salesAd img {
+    height: 300px;
+  }
+}
+@media (min-width: 689px) {
+  .social_media {
+    display: flex;
+    flex-flow: wrap row;
+  }
+}
+@media (max-width: 380px) {
+  .otherInfo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    margin: 1rem;
+    max-width: 180px;
+  }
+  .social_media > div {
+    max-width: 200px;
+  }
+
+  .brands {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 30%;
+  }
+  .moreInformation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .otherInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+@media (min-width: 880px) {
+  .pad {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .search {
+    display: flex;
+  }
+  .webmenu {
+    display: flex;
+    flex-direction: row;
+  }
+  .webmenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .webmenu ul li {
+    list-style: none;
+    padding: 0 0.8rem;
+  }
+  .webmenu ul li a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  .webmenu ul li a:hover {
+    color: var(--grey);
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 990px) {
+  .pad {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+@media (min-width: 1400px) {
+  .row {
+    flex-flow: nowrap row;
+  }
+  .social_media {
+    align-items: center;
+    justify-content: center;
+  }
+  .CustomerCARE {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
